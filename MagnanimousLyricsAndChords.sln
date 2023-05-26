@@ -6,9 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnanimousLyricsAndChords"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnanimousLyricsAndChords.API", "..\MagnanimousLyricsAndChordsAPI\MagnanimousLyricsAndChords.API\MagnanimousLyricsAndChords.API.csproj", "{497A5AEF-E6AC-4100-A6DA-6BB8D3A2668D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnanimousLyricsAndChords.Web", "..\MagnanimousLyricsAndChordsWEB\MagnanimousLyricsAndChords.Web\MagnanimousLyricsAndChords.Web.csproj", "{61B023D6-E017-4054-9658-512D773D47C0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnanimousLyricsAndChords.Components", "MagnanimousLyricsAndChords.Components\MagnanimousLyricsAndChords.Components.csproj", "{91DB3F8A-176F-438E-96B7-D524C35206AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnanimousLyricsAndChords.Web", "MagnanimousLyricsAndChordsWEB\MagnanimousLyricsAndChords.Web\MagnanimousLyricsAndChords.Web.csproj", "{77D5B7FE-80AD-4E3A-8AF9-E6A5F5B630C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,20 +26,20 @@ Global
 		{497A5AEF-E6AC-4100-A6DA-6BB8D3A2668D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{497A5AEF-E6AC-4100-A6DA-6BB8D3A2668D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{497A5AEF-E6AC-4100-A6DA-6BB8D3A2668D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61B023D6-E017-4054-9658-512D773D47C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61B023D6-E017-4054-9658-512D773D47C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61B023D6-E017-4054-9658-512D773D47C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61B023D6-E017-4054-9658-512D773D47C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91DB3F8A-176F-438E-96B7-D524C35206AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91DB3F8A-176F-438E-96B7-D524C35206AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91DB3F8A-176F-438E-96B7-D524C35206AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91DB3F8A-176F-438E-96B7-D524C35206AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D5B7FE-80AD-4E3A-8AF9-E6A5F5B630C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D5B7FE-80AD-4E3A-8AF9-E6A5F5B630C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D5B7FE-80AD-4E3A-8AF9-E6A5F5B630C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D5B7FE-80AD-4E3A-8AF9-E6A5F5B630C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EBE59284-6D4E-4964-904A-7F81DF6788B0}
 		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+		SolutionGuid = {EBE59284-6D4E-4964-904A-7F81DF6788B0}
 	EndGlobalSection
 EndGlobal

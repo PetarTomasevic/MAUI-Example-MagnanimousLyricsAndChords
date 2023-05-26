@@ -1,0 +1,23 @@
+﻿@page "/chords/{name}"
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@inject NavigationManager navMan
+<button type="button" @onclick="Back">Back</button>
+<ChordsComponent name="@name" ApiUrl="@ApiUrl"></ChordsComponent>
+
+@code {
+    [Parameter]
+    public string name { get; set; }
+
+    public string ApiUrl;
+    protected override void OnInitialized()
+    {
+        ApiUrl = Configuration.GetSection("ApiUrlChords").Value;
+
+    }
+    public async Task Back()
+    {
+        navMan.NavigateTo("/");
+
+    }
+}

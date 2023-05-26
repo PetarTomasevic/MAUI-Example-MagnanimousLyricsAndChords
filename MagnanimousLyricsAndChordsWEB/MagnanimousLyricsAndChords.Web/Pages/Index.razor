@@ -1,0 +1,14 @@
+﻿@page "/"
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+<SearchLyrics ApiUrl="@ApiUrl"></SearchLyrics>
+
+@code
+{
+    public string ApiUrl;
+    protected override void OnInitialized()
+    {
+        ApiUrl = Configuration.GetSection("ApiUrlSearch").Value;
+         
+    }
+}
