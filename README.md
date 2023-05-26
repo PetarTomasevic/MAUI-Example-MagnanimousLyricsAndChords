@@ -2,7 +2,7 @@
 
 Simple Example How to use BCL (Blazor class library) to build components and how to use them with MAUI and Web Application on any device,
 
-Example also contains everything you needto turn your web API into File storage Server with few lines of code.
+Example also contains everything you need to turn your web API into File storage Server with few lines of code.
 
 And With example how to modify MAUI app to use appsetings.json 
 
