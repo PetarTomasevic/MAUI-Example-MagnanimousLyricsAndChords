@@ -1,0 +1,67 @@
+﻿@using System.Text.Json;
+@using Microsoft.AspNetCore.Components.Routing
+
+
+<h3 class="display-2">Search Lyrics</h3>
+
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+        <div class="col-md-8">
+
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control" @bind-value="@searchString" placeholder="Search lyrics...">
+                <button class="btn btn-primary" @onclick="()=>Search(searchString)">Search</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<ul class="list-group">
+@foreach (var item in searchResult)
+{
+        <li class="list-group-item">
+            @{
+                var songUrl = $"chords/{item}";
+            }
+            <NavLink class="nav-link" href="@songUrl">
+                <span class="oi oi-star" aria-hidden="true"></span>  @item.Replace("_"," ").Replace(".txt","").Replace("-"," Artist: ")
+            </NavLink>
+           </li>
+}
+</ul>
+@code {
+
+    [Parameter]
+    public string ApiUrl { get; set; } 
+    public string searchString = "";
+    List<string> searchResult=new List<string>();
+
+    public async Task<List<string>> Search(string searchstring)
+    {
+        HttpClient client = new HttpClient();
+        var serializerOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                WriteIndented = true
+            };
+        var url = $"{ApiUrl}{searchstring}";
+        HttpResponseMessage response = await client.GetAsync(url);
+        if (response.IsSuccessStatusCode)
+        {
+            string content = await response.Content.ReadAsStringAsync();
+            searchResult = JsonSerializer.Deserialize<List<string>>(content, serializerOptions);
+        }
+
+        return searchResult;
+
+    }
+
+}

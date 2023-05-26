@@ -1,0 +1,11 @@
+﻿.content .px-4 {
+    height: 100vh;
+}
+h3 {
+    margin-top:3vh;
+}
+pre {
+    font-size:0.7em;
+    white-space: pre-wrap;
+    word-break: break-all;
+}

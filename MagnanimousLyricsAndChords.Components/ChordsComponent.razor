@@ -1,0 +1,32 @@
+﻿@using System.Text.Json;
+
+<h3>@name.Replace("_"," " ).Replace("-"," song by ").Replace(".txt","")</h3>
+<pre>
+    @((MarkupString)chords)
+</pre>
+
+
+@code {
+    [Parameter]
+    public string name { get; set; } = "";
+    [Parameter]
+    public string ApiUrl { get; set; }
+    public string chords = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient client = new HttpClient();
+        var serializerOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                WriteIndented = true
+            };
+        var url = $"{ApiUrl}{name}";
+        var response = await client.GetStringAsync(url);
+
+        chords = response; // JsonSerializer.Deserialize<string>(response, serializerOptions);
+
+
+
+    }
+}
